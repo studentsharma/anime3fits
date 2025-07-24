@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, User, Mail, Phone, Lock, ArrowRight, Check, X, Sparkles } from 'lucide-react';
+import { Eye, EyeOff, User, Mail, Phone, Lock, ArrowRight, Check, X } from 'lucide-react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { loginSuccess } from "../features/user/userSlice"
@@ -123,7 +123,7 @@ const SignupPage = () => {
     try {
       // Simulate API call
       // await new Promise(resolve => setTimeout(resolve, 2000));
-      const res = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/user/register_user`,{name:formData.name,
+      await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/user/register_user`,{name:formData.name,
         mobile : Number(formData.mobile),
         email : formData.email,
         password : formData.password}, {withCredentials : true}) 

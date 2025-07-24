@@ -2,8 +2,8 @@ import { ArrowRight } from 'lucide-react';
 import Slider from "./Slider"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../app/Store';
+import {  useDispatch } from 'react-redux';
+// import { RootState } from '../app/Store';
 import Header from "./Header.tsx"
 import Footer from "./Footer.tsx"
 import Pro from './Pro.tsx';
@@ -18,8 +18,9 @@ interface Product {
 }
 
 const HomePage = (): JSX.Element => {
-    const user = useSelector((state: RootState) => state.user.user);
+    // const user = useSelector((state: RootState) => state.user.user);
     // console.log(user);
+
     const dispatch = useDispatch();
     const [viewall, setviewall] = useState<boolean>(false)
     const [viewallbest, setviewallbest] = useState<boolean>(false)

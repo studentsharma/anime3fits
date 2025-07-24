@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Clock, MapPin, Package, Phone, Mail, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Truck, Clock, MapPin, Package, Phone, Mail, Instagram } from 'lucide-react';
 import Footer from './Footer';
 import Header from './Header';
 

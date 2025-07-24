@@ -35,6 +35,7 @@ const productSlice = createSlice({
             state.push(action.payload);
         },
         set_products: (state, action: PayloadAction<Product[]>) => {
+            state
             return action.payload;
         },
     }
