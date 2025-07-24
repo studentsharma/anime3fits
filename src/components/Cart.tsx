@@ -107,7 +107,7 @@ const Cart: React.FC<CartPageProps> = ({ initialItems = [] }) => {
 
   const removeItem = async (id: number, name: string) => {
     setCartItems(items => items.filter(item => item.id !== id));
-    const res = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/user/remove_cart`, { email, name }, { withCredentials: true })
+    await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/user/remove_cart`, { email, name }, { withCredentials: true })
     // console.log(res.data)
   };
 
